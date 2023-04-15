@@ -1,0 +1,80 @@
+//Area of a Triangle
+
+function triArea(base, height) {
+	let area = (base * height) / 2;
+	return area;
+}
+
+
+
+//Matchstick Houses
+
+function matchHouses(step) {
+	if (step === 0) {
+		return 0;
+	} else {
+		let matches = 1;
+		matches += (5 * step);
+	}
+	return matches;
+}
+
+
+
+//Check if One Array can be Nested in Another
+
+function canNest(arr1, arr2) {
+	//Compare minimums
+	arr1 = arr1.sort();
+	arr2 = arr2.sort();
+	let min1 = arr1[0];
+	let min2 = arr2[0];
+	
+	if (min1 <= min2) {
+		return false;
+	} else {
+		//Compare maximums
+		let decArr1 = arr1.reverse();
+		let decArr2 = arr2.reverse();
+		let max1 = decArr1[0];
+		let max2 = decArr2[0];
+	
+		if (max1 >= max2) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+  //Alternatively
+function canNest(arr1, arr2) {
+  let min1 = Math.min(...arr1);
+  let min2 = Math.min(...arr2);
+  let max1 = Math.max(...arr1);
+  let max2 = Math.max(...arr2);
+  
+  if (min2 < min1 && max2 > max1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+//Bitwise Operations
+
+function bitwiseAND(n1, n2) {
+	return n1 & n2;
+}
+
+function bitwiseOR(n1, n2) {
+	return n1 | n2;
+}
+
+function bitwiseXOR(n1, n2) {
+	return n1 ^ n2;
+}
+/* bitwise operations compare  */
+
+
+
