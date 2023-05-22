@@ -1,0 +1,30 @@
+# Longest Word
+# Have the function LongestWord(sen) take the sen parameter being passed and return the longest word in the string. If there are two or more words that are the same length,
+# return the first word from the string with that length. Ignore punctuation and assume sen will not be empty. Words may also contain numbers, for example "Hello world123 567"
+# Examples
+# Input: "fun&!! time"
+# Output: time
+# Input: "I love dogs"
+# Output: love
+
+function LongestWord(sen) { 
+
+  // use regexp to find words
+    // "+" says to matchone or more preceding tokens
+    // flag "gi" stands for "_g_lobal" and "case _i_nsensitive"
+    
+  arrWords = sen.match(/[a-z]+/gi);
+  
+  // sort the new array from longest to shortest
+  
+  sorted = arrWords.sort((a,b) => b.length - a.length);
+  
+  // choose longest, now first, word.
+  
+  sen = sorted[0];
+  return sen; 
+
+}
+   
+// keep this function call here 
+console.log(LongestWord(readline()));
