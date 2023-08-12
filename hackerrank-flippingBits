@@ -1,0 +1,17 @@
+/*
+ *You will be given a list of 32 bit unsigned integers. Flip all the bits (1 to 0) and (0 to 1) and return the result as an unsigned integer.
+ *Function Description
+ *Complete the flippingBits function in the editor below.
+ *flippingBits has the following parameter(s):
+ *int n: an integer
+ *Returns
+ *int: the unsigned decimal integer result
+ */
+
+
+function flippingBits(n) {
+    // ~ flips the bits after converting to 32bit int
+    // >>> unsigned right shift, used here to de-sign the resulting binary number
+    return (~n >>> 0);
+    
+}
